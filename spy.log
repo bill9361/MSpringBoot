@@ -1,0 +1,1 @@
+1532404387346|12|statement|connection 9|select * from user where id=?|select * from user where id='2ed74245-335c-4e20-97cb-d0a2493e924d'
