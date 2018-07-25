@@ -3,6 +3,8 @@ package com.bill.mspringboot.service;
 import java.util.List;
 import java.util.Map;
 
+import com.bill.mspringboot.entity.Company;
+
 /**
  * Description: <br/>
  * Date:2018年7月24日 下午1:19:11 <br/>
@@ -26,5 +28,13 @@ public interface CompanyService
 	 * @return
 	 */
 	List<Map<String, Object>> getCompanysByName(String name);
+
+
+	/**
+	 * 根据name模糊查找公司信息
+	 * @param name
+	 * @return
+	 */
+	List<Company> getCompanysByName1(String name);
 
 }

@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.bill.mspringboot.entity.Company;
 import com.bill.mspringboot.mapper.CompanyMapper;
 import com.bill.mspringboot.service.CompanyService;
 
@@ -40,5 +41,16 @@ public class CompanyServiceImpl implements CompanyService
 	public List<Map<String,Object>> getCompanysByName(String name)
 	{
 		return companyMapper.getCompanysByName(name);
+	}
+
+	/**
+	 * 根据名称模糊查找公司信息
+	 * @param name
+	 * @return
+	 */
+	@Override
+	public List<Company> getCompanysByName1(String name)
+	{
+		return companyMapper.getCompanysByName1(name);
 	}
 }

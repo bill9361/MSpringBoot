@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.bill.mspringboot.entity.Company;
 import com.bill.mspringboot.service.CompanyService;
 
 /**
@@ -47,5 +48,19 @@ public class CompanyController
 		return companyService.getCompanysByName(name);
 	}
 	
-	
+
+	/**
+	 * 根据名称模糊查找公司信息
+	 * @param name
+	 * @return
+	 */
+	@RequestMapping("/getCompanysByName1.do")
+	@ResponseBody
+	public List<Company> getCompanysByName1(String name)
+	{
+		System.out.println("CompanyController....getCompanysByName1()");
+		List<Company> companyList = companyService.getCompanysByName1(name);
+		System.out.println(companyList);
+		return companyList;
+	}
 }
