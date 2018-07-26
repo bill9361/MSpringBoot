@@ -42,7 +42,7 @@ public class FrontController
 	/**
 	 * 视图解析器
 	 */
-	@RequestMapping("/testView.do")
+	@RequestMapping("/testView")
 	public String testView()
 	{
 		return "/front/test_view.jsp";
